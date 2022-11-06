@@ -1,6 +1,6 @@
 package checkers;
 
-public class Exceptions<T> {
+public class Exceptions {
 
 	public static void exceptionCheck(int arrayLength, int leftIndex, int rightIndex) {
 		if (arrayLength <= 0) {

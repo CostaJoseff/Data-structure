@@ -24,11 +24,11 @@ public class QuickSort<T extends Comparable<T>> extends AbstractSorting<T> {
 	 */
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		Exceptions.exceptionCheck(array.length,leftIndex, rightIndex);
-		
-		int pivotIndex = quickSort(array, leftIndex, rightIndex);
-		sort(array, leftIndex, pivotIndex - 1);
-		sort(array, pivotIndex + 1, rightIndex);
+		if (leftIndex < rightIndex) {
+			int pivotIndex = quickSort(array, leftIndex, rightIndex);
+			sort(array, leftIndex, pivotIndex - 1);
+			sort(array, pivotIndex + 1, rightIndex);
+		}
 	}
 	
 	/**
